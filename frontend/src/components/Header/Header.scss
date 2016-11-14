@@ -1,0 +1,15 @@
+@import "~styles/variables/colors";
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: $bondi-blue;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav {
+  display: inline-block;
+}
