@@ -19,8 +19,8 @@ if (!function_exists('react_file')) {
         $fileExt = $fileParts[1];
 
         $allActualFiles = array_map(function ($fullPath) {
-            $fileFragments = explode('/', $fullPath);
-            return array_pop($fileFragments);
+            $fileFragments = explode(DIRECTORY_SEPARATOR, $fullPath);
+            return end($fileFragments);
         }, $allFiles);
 
         $actualFileName = array_first($allActualFiles, function ($actual) use ($fileName, $fileExt) {
