@@ -11,12 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('groups');
-});
-
 Route::get('groups', function () {
-   return view('groups');
+    $group = (object) ['name' => 'My soccer team', 'story' => 'We started a soccer team'];
+    $state = [
+        'group' => $group
+    ];
+
+    $initialState = json_encode($state);
+
+   return view('groups', compact('group', 'initialState'));
 });
 
 Route::get('group-options', function () {
