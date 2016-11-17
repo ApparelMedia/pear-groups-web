@@ -1,12 +1,16 @@
 const webpack = require('webpack')
 const debug = require('debug')('app:build:webpack-compiler')
 const config = require('../config')
+const rimraf = require('rimraf')
 
 function webpackCompiler (webpackConfig, statsFormat) {
   statsFormat = statsFormat || config.compiler_stats
 
   return new Promise((resolve, reject) => {
     const compiler = webpack(webpackConfig)
+    let distPath = webpackConfig.output.path
+    debug('Deleting the dist directory')
+    rimraf.sync(distPath)
 
     compiler.run((err, stats) => {
       if (err) {
@@ -15,6 +19,7 @@ function webpackCompiler (webpackConfig, statsFormat) {
       }
 
       const jsonStats = stats.toJson()
+
       debug('Webpack compile completed.')
       debug(stats.toString(statsFormat))
 

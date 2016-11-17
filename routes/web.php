@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('groups');
+});
+
+Route::get('groups', function () {
+   return view('groups');
 });
 
 Route::get('group-options', function () {

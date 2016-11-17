@@ -16,7 +16,7 @@ const config = {
   // ----------------------------------
   path_base  : path.resolve(__dirname, '..'),
   dir_client : 'src',
-  dir_dist   : 'dist',
+  dir_dist   : '../public/react',
   dir_server : 'server',
   dir_test   : 'tests',
   dir_node_modules: '../node_modules',

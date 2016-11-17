@@ -16,10 +16,6 @@ export default [
     label: 'Story'
   },
   {
-    value: 'gender',
-    label: 'Gender'
-  },
-  {
     value: 'photo',
     label: 'Photo'
   }

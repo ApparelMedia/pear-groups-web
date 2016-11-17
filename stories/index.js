@@ -12,6 +12,8 @@ import WatchYoutube from '../frontend/src/components/tasks/WatchYoutube'
 import FacebookLike from '../frontend/src/components/tasks/FacebookLike'
 import CityState from '../frontend/src/components/forms/CityState'
 import GroupType from '../frontend/src/components/forms/GroupType' 
+import GroupStory from '../frontend/src/components/forms/GroupStory' 
+import GroupPhoto from '../frontend/src/components/forms/GroupPhoto' 
 // Import Stops Here
 
 storiesOf('Home', module)
@@ -80,7 +82,19 @@ storiesOf('GroupType', module)
     <GroupType></GroupType>
   ))
 
+storiesOf('GroupStory', module)
+  .add('Default', () => (
+    <GroupStory></GroupStory>
+  ))
+
+storiesOf('GroupPhoto', module)
+  .add('Default', () => (
+    <GroupPhoto></GroupPhoto>
+  ))
+
 // Stories Stop Here
+
+
 
 
 

@@ -38,7 +38,7 @@
       }
     },
     "deploy": {
-      "command": "npm run lint && npm run test && npm run clean && npm run compile",
+      "command": "npm run clean && npm run compile",
       "env": {
         "DEBUG": "app:*"
       }
@@ -151,6 +151,7 @@
     "plop": "^1.5.0",
     "react-addons-test-utils": "^15.0.0",
     "redbox-react": "^1.2.10",
+    "rimraf": "^2.5.4",
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
     "webpack-dev-middleware": "^1.6.1",

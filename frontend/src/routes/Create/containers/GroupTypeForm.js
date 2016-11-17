@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { changeNameFieldValue, goToNextStep } from 'actions/create'
+import { changeTypeFieldValue, goToNextStep } from 'actions/create'
 import GroupType from 'components/forms/GroupType'
 const types = [
   {
@@ -170,7 +170,7 @@ const mapDispatchToProps = {
     const changedInfo = {
       value: event.target.value
     }
-    dispatch(changeNameFieldValue(changedInfo))
+    dispatch(changeTypeFieldValue(changedInfo))
   },
   onFormSubmit: (event) => (dispatch) => {
     event.preventDefault()

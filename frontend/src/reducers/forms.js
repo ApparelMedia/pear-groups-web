@@ -8,6 +8,15 @@ const defaultFormsState = {
     location: {
       city: '',
       state: ''
+    },
+    type: {
+      value: ''
+    },
+    story: {
+      value: ''
+    },
+    photo: {
+      value: ''
     }
   }
 }

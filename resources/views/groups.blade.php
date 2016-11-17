@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Pear Group Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <title>{{ $groupName or 'New Group' }} - Pear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{asset(react_path('app.css'))}}">
+    <script src='{{asset(react_path('vendor.js'))}}'></script>
+    <script>
+      window.___INITIAL_STATE__ = {};
+    </script>
 </head>
 <body>
-  <div id="root" style="height: 100%"></div>
+<div id="root" style="height: 100%"></div>
+<script src='{{asset(react_path('app.js'))}}'></script>
 </body>
 </html>
