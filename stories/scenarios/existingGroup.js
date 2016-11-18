@@ -1,6 +1,6 @@
 export default {
   group: {
-    name: "Hao's Soccer Team",
+    name: "Hao's New Soccer Team",
     city: "Chicago",
     state: "IL",
     started: "4/5/2016"

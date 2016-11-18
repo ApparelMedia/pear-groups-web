@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
 import AppContainer from './containers/AppContainer'
-import DevInitialState from '../../stories/scenarios/initialFetched'
+import DevInitialState from '../../stories/scenarios/initialState'
 
 const initialState = __DEV__ ? DevInitialState : window.___INITIAL_STATE__
 // ========================================================

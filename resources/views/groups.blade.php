@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>{{ $groupName or 'New Group' }} - Pear</title>
+    <title>{{ $groupName ? $groupName : 'New Group' }} - Pear Group</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset(react_path('app.css'))}}">
     <script src='{{asset(react_path('vendor.js'))}}'></script>
     <script>
-      window.___INITIAL_STATE__={!! $initialState or '{}'!!}
+      window.___INITIAL_STATE__= {!! $initialState or '{}'!!}
     </script>
 </head>
 <body>

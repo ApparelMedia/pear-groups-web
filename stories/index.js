@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
-import initialFetched from './scenarios/initialFetched'
+import initialFetched from './scenarios/existingGroup'
 import Home from '../frontend/src/routes/Home/components/HomeView'
 import Header from '../frontend/src/components/Header'
 import PeopleList from '../frontend/src/components/PeopleList'
@@ -14,6 +14,7 @@ import CityState from '../frontend/src/components/forms/CityState'
 import GroupType from '../frontend/src/components/forms/GroupType' 
 import GroupStory from '../frontend/src/components/forms/GroupStory' 
 import GroupPhoto from '../frontend/src/components/forms/GroupPhoto' 
+import TopNav from '../frontend/src/components/TopNav' 
 // Import Stops Here
 
 storiesOf('Home', module)
@@ -92,7 +93,13 @@ storiesOf('GroupPhoto', module)
     <GroupPhoto></GroupPhoto>
   ))
 
+storiesOf('TopNav', module)
+  .add('Default', () => (
+    <TopNav></TopNav>
+  ))
+
 // Stories Stop Here
+
 
 
 

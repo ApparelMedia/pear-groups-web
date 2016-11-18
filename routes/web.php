@@ -18,8 +18,9 @@ Route::get('groups', function () {
     ];
 
     $initialState = json_encode($state);
+    $groupName = '';
 
-   return view('groups', compact('group', 'initialState'));
+   return view('groups', compact('group', 'initialState', 'groupName'));
 });
 
 Route::get('group-options', function () {

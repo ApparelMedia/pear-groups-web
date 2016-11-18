@@ -27,7 +27,12 @@ When webpack compiles the files from the react app source files, it creates all 
 
 There are two helper functions located in `app/Support/helpers.php`.  `react_file` looks at the `public/react` directory and outputs the generated filename
 
-### `___INITIAL_STATE__` is the key global variable
+### `___INITIAL_STATE__` is the key global variable in production
 There is a **triple underscore** in the beginning, and a **double underscore** at the end.
 
 This is the global variable that the react/redux app is looking for when it's starting up.  (see `frontend/src/main.js`)
+
+### The initial state For Dev
+In an effort to centralize the initial states of various scenarios during development.  All the initial states are in `stories/scenarios/*.js`.  
+
+You can change the scenario by changing which initial state to get in `stories/scenarios/initialState.js`

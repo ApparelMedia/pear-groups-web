@@ -1,29 +1,15 @@
 import React from 'react'
-import { IndexLink, Link } from 'react-router'
+import TopNav from 'containers/TopNavContainer'
 import styles from './Header.scss'
 import logo from './assets/logo.png'
 
-export const Header = (props) => (
-  <div className={styles.base}>
-    <img className={styles.logo} src={logo} />
-    <nav className={styles.nav}>
-      <IndexLink to='/' activeClassName={styles.active}>
-        Home
-      </IndexLink>
-
-      <Link to='/login' activeClassName={styles.active}>
-        Login
-      </Link>
-
-      <Link to='/rally' activeClassName={styles.active}>
-        Rally
-      </Link>
-
-      <Link to='/create' activeClassName={styles.active}>
-        Create
-      </Link>
-    </nav>
-  </div>
-)
+export const Header = (props) => {
+  return (
+    <div className={styles.base}>
+      <img className={styles.logo} src={logo} />
+      <TopNav className={styles.nav} {...props} />
+    </div>
+  )
+}
 
 export default Header
