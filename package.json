@@ -117,7 +117,6 @@
     "yargs": "^5.0.0"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
     "babel-core": "^6.17.0",
     "babel-eslint": "^6.0.0-beta.6",
     "babel-plugin-istanbul": "^2.0.1",
