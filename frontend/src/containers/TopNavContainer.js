@@ -2,7 +2,8 @@ import TopNav from 'components/TopNav'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => ({
-  group: state.group.name !== ''
+  group: state.group.name !== '',
+  groupName: state.group.name
 })
 
 //

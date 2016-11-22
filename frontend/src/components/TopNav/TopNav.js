@@ -8,17 +8,19 @@ class TopNav extends Component {
     className: PropTypes.string
   }
 
-  outputCreate (hasGroup) {
-    if ( ! hasGroup) {
-      return (<Link to='/create' activeClassName={styles.active}>
-        Create
-      </Link>)
-    }
-    return ''
+  outputCreate (groupName) {
+      if(groupName.endsWith('Team'))
+      {
+          return (<Link to='/create' activeClassName={styles.active}>
+              Create
+          </Link>)
+      }
+
+      return ''
   }
 
   render () {
-    const { group, className: classes = '' } = this.props
+      const { group, groupName, className: classes = '' } = this.props
 
     return (
       <nav className={classes + ' ' + styles.base}>
@@ -34,7 +36,7 @@ class TopNav extends Component {
           Rally
         </Link>
         {
-          this.outputCreate(group)
+          this.outputCreate(groupName)
         }
       </nav>
     )

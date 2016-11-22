@@ -1,9 +1,10 @@
 export default {
   group: {
-    name: "Hao's New Soccer Team",
+    name: "Vince's New Soccer Team",
     city: "Chicago",
     state: "IL",
-    started: "4/5/2016"
+    started: "4/5/2016",
+    story: "My group's story",
   },
   members: [
     {id: 1, firstName: 'Jane', lastName: 'Smith', photoUrl: '//randomuser.me/api/portraits/women/60.jpg'},
