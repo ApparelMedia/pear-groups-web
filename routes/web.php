@@ -12,7 +12,7 @@
 */
 
 Route::get('groups', function () {
-    $group = (object) ['name' => 'My soccer team', 'story' => 'We started a soccer team'];
+    $group = (object) ['name' => 'Vince soccer team', 'story' => 'We started a soccer team'];
     $state = [
         'group' => $group
     ];

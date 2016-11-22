@@ -36,3 +36,26 @@ This is the global variable that the react/redux app is looking for when it's st
 In an effort to centralize the initial states of various scenarios during development.  All the initial states are in `stories/scenarios/*.js`.  
 
 You can change the scenario by changing which initial state to get in `stories/scenarios/initialState.js`
+
+## Convention
+Since we are working as a team, it's important to have some convention that will make this project as readable and maintainable as possible.
+
+### 1. Components are separated by folders that has the same name under `components` directory
+if you have a component called 'Greet', then there should be a folder named 'Greet' and in it have 3 files: `index.js`, `Greet.js`, and `Greet.scss`.
+The reason for having Greet has a folder name and a index.js file is for the convenience of importing said component.  
+Per standard, if you import a package with a string like so 'components/Greet', it will test for the following:
+1. Does `Greet.js` exist under `components` directory? resolve with `Greet.js`
+2. Does `Greet` directory exist under `components directory? resolve with `index.js` under `Greet` directory
+
+The reason why we don't just include the component definition in the `index.js` is because when we are debugging the app, the dev tool will simply display a bunch of `index.js` files in the trace, which is not helpful at all.
+
+### 2. Use CSS Modules when defining React Components
+I think we all felt the pain of CSS when we change the styles in CSS and nothing changed on the page.  It usually comes down to the fact that CSS is globally scoped, and what style gets overwritten is determined by CSS Specificity.
+
+CSS Modules is an attempt to fix that.  What it does is for every classSelector you create, it create a random hash that correspond to it.  Then when you import the css into your javascript, webpack creates an object that has that hash.  You then add the hash to the className of the element you want the style to affect.
+
+### 3. Reducers are all in a directory called `reducers`
+
+### 4. all routes are in a directory called `routes`
+
+### 5. Actions are defined in 
