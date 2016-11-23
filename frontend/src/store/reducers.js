@@ -9,7 +9,9 @@ export const makeRootReducer = (asyncReducers) => {
     location: locationReducer,
     forms: formReducer,
     group: groupReducer,
-    members: (prevState, action) => ({ ...prevState }),
+    members: (prevState = [], action) => { 
+      return [ ...prevState ]
+    },
     supporters: (prevState, action) => ({ ...prevState }),
     pears: (prevState, action) => ({ ...prevState }),
     tasks: (prevState = [], action) => {

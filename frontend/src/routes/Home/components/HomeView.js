@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import './HomeView.scss'
+import MemberListContainer from 'containers/MemberListContainer'
 
 class HomeView extends Component {
   static propTypes = {
@@ -13,6 +14,7 @@ class HomeView extends Component {
       <div>
         <h4>{ name }</h4>
         <p>{ story }</p>
+        <MemberListContainer/>
       </div>
     )
   }
