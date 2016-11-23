@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import './HomeView.scss'
 import MemberListContainer from 'containers/MemberListContainer'
+import AddUserButton from 'components/AddUserButton'
 
 class HomeView extends Component {
   static propTypes = {
@@ -9,12 +10,14 @@ class HomeView extends Component {
   }
 
   render () {
-    const { name, story } = this.props
+    const { name, story, createUser } = this.props
+
     return (
       <div>
         <h4>{ name }</h4>
         <p>{ story }</p>
         <MemberListContainer/>
+        <AddUserButton createUser={createUser}/>
       </div>
     )
   }

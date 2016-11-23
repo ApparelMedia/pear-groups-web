@@ -1,4 +1,5 @@
 import HomeView from '../components/HomeView'
+import { CREATE_USER } from 'actions/user'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => ({
@@ -6,4 +7,10 @@ const mapStateToProps = (state) => ({
   story: state.group.story
 })
 
-export default connect(mapStateToProps)(HomeView)
+const mapDispatchToProps = {
+	createUser: (event) => (dispatch) => {
+		dispatch({type: CREATE_USER})
+	},
+} 
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
