@@ -3,6 +3,7 @@ import locationReducer from './location'
 import formReducer from '../reducers/forms'
 import groupReducer from '../reducers/group'
 import createGroupReducer from '../reducers/createGroup'
+import tasksReducer from '../reducers/tasks'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
@@ -14,9 +15,7 @@ export const makeRootReducer = (asyncReducers) => {
     },
     supporters: (prevState, action) => ({ ...prevState }),
     pears: (prevState, action) => ({ ...prevState }),
-    tasks: (prevState = [], action) => {
-      return [ ...prevState ]
-    },
+    tasks: tasksReducer,
     createGroup: createGroupReducer,
     ...asyncReducers
   })

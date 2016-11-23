@@ -6,18 +6,18 @@ import styles from './TaskList.scss'
 
 class TaskList extends Component {
   render () {
-    let { tasks } = this.props;
+    let { tasks, onClickTaskHeader } = this.props;
     return (
       <div className={styles.base}>
         <ol>
           { tasks.map((task, index) => {
             if (task.type === 'facebook') {
-              return <Task {...task} index={index} key={index}>
+              return <Task {...task} onClickTaskHeader={onClickTaskHeader} index={index} key={index}>
                 <FacebookLike instructionText={task.instructionText} />
               </Task>
             }
             if (task.type === 'youtube') {
-              return <Task {...task} index={index} key={index}>
+              return <Task {...task} onClickTaskHeader={onClickTaskHeader} index={index} key={index}>
                 <WatchYoutube instructionText={task.instructionText} />
               </Task>
             }

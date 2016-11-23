@@ -3,12 +3,12 @@ import TaskList from 'components/TaskList'
 
 class RallyView extends Component {
   render () {
-    let { name, tasks } = this.props
+    let { name, tasks, onClickTaskHeader } = this.props
     console.log(tasks);
     return (
       <div>
         <h4>{name} Rally Page</h4>
-        <TaskList tasks={tasks}/>
+        <TaskList tasks={tasks} onClickTaskHeader={onClickTaskHeader} />
       </div>
     )
   }

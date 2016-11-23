@@ -22,14 +22,14 @@ export default {
       type: 'facebook',
       name: 'Facebook Connect',
       instructionText: 'Connect with us on Facebook now',
-      open: true,
+      open: false,
       completed: false
     },
     {
       type: 'youtube',
       name: 'Watch this Video',
       instructionText: 'Please watch this Video',
-      open: false,
+      open: true,
       completed: false
     }
   ]
