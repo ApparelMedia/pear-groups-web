@@ -7,7 +7,7 @@ class Task extends Component {
     let count = index + 1;
     let baseClassName = [
       styles.base,
-      open ? ' ' + styles.open : ' ' + styles.closed,
+      open ? ' ' + styles.open : ' ' + styles.closed
     ].join(' ')
 
     return (
@@ -28,7 +28,8 @@ Task.propTypes = {
   index: PropTypes.number.isRequired,
   open: PropTypes.bool.isRequired,
   completed: PropTypes.bool.isRequired,
-  onClickTaskHeader: PropTypes.func.isRequired
+  onClickTaskHeader: PropTypes.func.isRequired,
+  children: PropTypes.any
 }
 
 Task.defaultProps = {

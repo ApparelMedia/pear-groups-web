@@ -16,7 +16,8 @@ class RallyView extends Component {
 
 RallyView.propTypes = {
   name: PropTypes.string.isRequired,
-  tasks: PropTypes.array.isRequired
+  tasks: PropTypes.array.isRequired,
+  onClickTaskHeader: PropTypes.func.isRequired
 }
 
 export default RallyView

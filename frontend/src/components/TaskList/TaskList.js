@@ -29,7 +29,8 @@ class TaskList extends Component {
 }
 
 TaskList.propTypes = {
-  tasks: PropTypes.array.isRequired
+  tasks: PropTypes.array.isRequired,
+  onClickTaskHeader: PropTypes.func.isRequired
 }
 
 export default TaskList

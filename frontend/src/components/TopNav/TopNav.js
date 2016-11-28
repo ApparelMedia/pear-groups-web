@@ -4,23 +4,22 @@ import styles from './TopNav.scss'
 
 class TopNav extends Component {
   static propTypes = {
-    group: PropTypes.bool.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    groupName: PropTypes.groupName.isRequired
   }
 
   outputCreate (groupName) {
-      if(groupName.endsWith('Team'))
-      {
-          return (<Link to='/create' activeClassName={styles.active}>
-              Create
-          </Link>)
-      }
+    if (groupName.endsWith('Team')) {
+      return (<Link to='/create' activeClassName={styles.active}>
+        Create
+      </Link>)
+    }
 
-      return ''
+    return ''
   }
 
   render () {
-      const { group, groupName, className: classes = '' } = this.props
+    const { groupName, className: classes = '' } = this.props
 
     return (
       <nav className={classes + ' ' + styles.base}>

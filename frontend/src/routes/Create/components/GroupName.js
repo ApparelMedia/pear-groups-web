@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Form, Input, Button } from 'antd'
 
-
 class GroupName extends Component {
   static defaultProps = {
     hidden: false
@@ -18,7 +17,7 @@ class GroupName extends Component {
     const { onFormSubmit, onNameChange, name, hidden } = this.props
     return (
       <Form onSubmit={onFormSubmit} style={hidden ? { display: 'none' } : {}}>
-        <Input label='Name' name='name' onChange={onNameChange} value={name} placeholder="Group Name" />
+        <Input label='Name' name='name' onChange={onNameChange} value={name} placeholder='Group Name' />
         <Button htmlType='submit'>Next</Button>
       </Form>
     )

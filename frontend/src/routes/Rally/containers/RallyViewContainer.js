@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import RallyView from '../components/RallyView'
-import { openTask } from  'actions/rally'
+import { openTask } from 'actions/rally'
 
 const mapStateToProps = (state) => ({
   name: state.group.name,

@@ -5,8 +5,9 @@ import AddUserButton from 'components/AddUserButton'
 
 class HomeView extends Component {
   static propTypes = {
-    name : PropTypes.string.isRequired,
-    story : PropTypes.string.isRequired
+    name: PropTypes.string.isRequired,
+    story: PropTypes.string.isRequired,
+    createUser: PropTypes.string.isRequired
   }
 
   render () {
@@ -16,8 +17,8 @@ class HomeView extends Component {
       <div>
         <h4>{ name }</h4>
         <p>{ story }</p>
-        <MemberListContainer/>
-        <AddUserButton createUser={createUser}/>
+        <MemberListContainer />
+        <AddUserButton createUser={createUser} />
       </div>
     )
   }

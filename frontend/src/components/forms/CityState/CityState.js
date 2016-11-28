@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import styles from './CityState.scss'
 import { Select, Input, Form, Button } from 'antd'
 
-const FormItem = Form.Item
-
 const { Option } = Select;
 const states = [
   {
@@ -261,7 +259,7 @@ class CityState extends Component {
     const { submitForm, cityChange, stateChange, city, hidden } = this.props
     return (
       <Form onSubmit={submitForm} className={hidden ? styles.hidden : ''}>
-        <Input label='City' name='city' onChange={cityChange} value={city} placeholder="City" />
+        <Input label='City' name='city' onChange={cityChange} value={city} placeholder='City' />
         <Select label='State' name='state' onChange={stateChange} className={styles.select} placeholder='State'>
           {states.map((state, index) => {
             return <Option key={index} index={index} value={state.abbreviation}>{state.abbreviation}</Option>

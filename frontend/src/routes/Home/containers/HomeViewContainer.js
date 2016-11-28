@@ -8,9 +8,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-	createUser: (event) => (dispatch) => {
-		dispatch({type: CREATE_USER})
-	},
-} 
+  createUser: (event) => (dispatch) => {
+    dispatch({ type: CREATE_USER })
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeView)

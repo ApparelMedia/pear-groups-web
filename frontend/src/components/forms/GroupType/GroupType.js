@@ -11,7 +11,7 @@ class GroupType extends Component {
     onFormSubmit: PropTypes.func.isRequired,
     onValueChange: PropTypes.func.isRequired,
     groupTypes: PropTypes.array.isRequired,
-    hidden: PropTypes.bool.isRequired,
+    hidden: PropTypes.bool.isRequired
   }
 
   render () {
