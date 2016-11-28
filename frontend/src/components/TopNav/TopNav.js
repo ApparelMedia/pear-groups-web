@@ -5,7 +5,7 @@ import styles from './TopNav.scss'
 class TopNav extends Component {
   static propTypes = {
     className: PropTypes.string,
-    groupName: PropTypes.groupName.isRequired
+    groupName: PropTypes.string.isRequired
   }
 
   outputCreate (groupName) {
