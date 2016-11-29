@@ -1,4 +1,4 @@
-# Groups Page Frontend
+# Groups Page Frontend [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Using React and Redux.  The frontend app is "wrapped" in an Laravel app.
 
