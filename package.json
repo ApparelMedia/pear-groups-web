@@ -8,7 +8,7 @@
     "npm": "^3.0.0"
   },
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf public/react",
     "compile": "better-npm-run compile",
     "lint": "eslint frontend/src frontend/tests",
     "lint:fix": "npm run lint -- --fix",
@@ -38,7 +38,7 @@
       }
     },
     "deploy": {
-      "command": "npm run clean && npm run compile",
+      "command": "npm run lint && npm run clean && npm run compile",
       "env": {
         "DEBUG": "app:*"
       }
