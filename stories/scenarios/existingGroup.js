@@ -1,4 +1,7 @@
 export default {
+  user: {
+    name: 'Vincent Chavez'
+  },
   group: {
     name: "Vince's New Soccer Team",
     city: "Chicago",
