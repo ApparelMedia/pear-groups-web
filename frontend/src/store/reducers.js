@@ -5,9 +5,11 @@ import groupReducer from '../reducers/group'
 import createGroupReducer from '../reducers/createGroup'
 import tasksReducer from '../reducers/tasks'
 import membersReducer from '../reducers/members'
+import userReducer from '../reducers/user'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
+    user: userReducer,
     location: locationReducer,
     forms: formReducer,
     group: groupReducer,
