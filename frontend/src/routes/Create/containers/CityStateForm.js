@@ -8,25 +8,25 @@ const mapStateToProps = (state) => ({
   hidden: state.createGroup.currentStep.value !== 'location'
 })
 
-const mapDispatchToProps = {
-  cityChange: (event) => (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
+  cityChange: (event) => {
     const changedInfo = {
       name: event.target.name,
       value: event.target.value
     }
     dispatch(changeLocationFieldValue(changedInfo))
   },
-  stateChange: (value) => (dispatch) => {
+  stateChange: (value) => {
     const changedInfo = {
       name: 'state',
       value
     }
     dispatch(changeLocationFieldValue(changedInfo))
   },
-  submitForm: (event) => (dispatch) => {
+  submitForm: (event) => {
     event.preventDefault()
     dispatch(goToNextStep())
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(CityState)

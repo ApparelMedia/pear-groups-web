@@ -7,11 +7,11 @@ const mapStateToProps = (state) => ({
   tasks: state.tasks
 })
 
-const mapDispatchToProps = {
-  onClickTaskHeader: (event) => (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
+  onClickTaskHeader: (event) => {
     const taskIndex = parseInt(event.currentTarget.querySelector('span').innerText);
     dispatch(openTask(taskIndex));
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(RallyView)

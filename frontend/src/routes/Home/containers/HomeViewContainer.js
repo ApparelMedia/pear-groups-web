@@ -7,10 +7,10 @@ const mapStateToProps = (state) => ({
   story: state.group.story
 })
 
-const mapDispatchToProps = {
-  createUser: (event) => (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
+  createUser: (event) => {
     dispatch({ type: CREATE_USER })
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeView)

@@ -165,17 +165,17 @@ const mapStateToProps = (state) => ({
   hidden: state.createGroup.currentStep.value !== 'type'
 })
 
-const mapDispatchToProps = {
-  onValueChange: (event) => (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
+  onValueChange: (event) => {
     const changedInfo = {
       value: event.target.value
     }
     dispatch(changeTypeFieldValue(changedInfo))
   },
-  onFormSubmit: (event) => (dispatch) => {
+  onFormSubmit: (event) => {
     event.preventDefault()
     dispatch(goToNextStep())
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupType)

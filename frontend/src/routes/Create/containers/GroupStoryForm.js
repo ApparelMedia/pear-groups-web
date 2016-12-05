@@ -6,17 +6,17 @@ const mapStateToProps = (state) => ({
   hidden: state.createGroup.currentStep.value !== 'story'
 })
 
-const mapDispatchToProps = {
-  onValueChange: (event) => (dispatch) => {
+const mapDispatchToProps = (dispatch) => ({
+  onValueChange: (event) => {
     const changedInfo = {
       value: event.target.value
     }
     dispatch(changeStoryFieldValue(changedInfo))
   },
-  onFormSubmit: (event) => (dispatch) => {
+  onFormSubmit: (event) => {
     event.preventDefault()
     dispatch(goToNextStep())
   }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupStory)
